@@ -1,0 +1,7 @@
+dispatch:
+  - url: dev.manabadi.ml/*
+    service: app-dev
+  - url: qa.manabadi.ml/*
+    service: app-qa
+  - url: uat.manabadi.ml/*
+    service: app-uat

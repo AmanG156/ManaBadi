@@ -1,0 +1,28 @@
+name: Manabadi Frontend - QA
+
+on:
+  push:
+    branches:
+      - env-qa
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+      - run: npm install
+      - run: npm run build
+        env:
+          CI: true
+      - name: Initialize Google Cloud SDK & Deploy
+        uses: etereo-io/deploy-gae-action@master
+        with:
+          gae_config_path: "./app-qa.yml"
+          service_account: ${{ secrets.GCP_SA_KEY }}
+          project_id: ${{ secrets.PROJECT_ID }}

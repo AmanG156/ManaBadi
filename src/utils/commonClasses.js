@@ -1,0 +1,131 @@
+import { colors, fonts } from '../theme';
+
+const commonclasses = () => ({
+  errorText: {
+    color: colors.errorText,
+    fontSize: '0.7vw',
+    position: 'absolute',
+    fontWeight: fonts.fontWeight.low,
+    fontFamily: `${fonts.fontType.roboto} !important`,
+    display: 'block',
+  },
+  borderBottom: {
+    background: colors.secondary,
+    height: '0.3vw',
+    '@media (max-width: 1024px)': {
+      height: '5px',
+    },
+    display: 'block',
+    width: '97%',
+    marginLeft: '1vw',
+  },
+  footerBottom: {
+    background: colors.footerBottomColor,
+    height: '0.1vw',
+    display: 'block',
+    width: '99%',
+    marginTop: '2vw',
+  },
+  contactUsLinks: {
+    fontSize: '0.9vw',
+    fontWeight: 500,
+    textAlign: 'left',
+    color: `${colors.black} !important`,
+    textDecoration: 'none',
+    fontFamily: `${fonts.fontType.roboto} !important`,
+    '@media (max-width: 1024px)': {
+      fontSize: 14,
+    },
+  },
+  menuItemAnchor: {
+    color: `${colors.anchorTagColor} !important`,
+  },
+  activeButton: {
+    color: '#f3f8fe !important',
+    '@media (min-width: 1200px)': {
+      height: '2.5vw',
+      fontSize: '1vw',
+      padding: '0.8vw',
+      minWidth: '15vw',
+      borderRadius: '0.4vw !important',
+    },
+    fontSize: 'calc(12px + 6 * ((100vw - 320px) / 1199))',
+    boxShadow: '0 4px 4px -2px hsl(0deg 0% 65% / 25%)',
+    boxSizing: 'border-box',
+    fontFamily: 'inherit',
+    marginLeft: '1.2vw',
+    marginRight: '1vw',
+    textTransform: 'none !important',
+    background: `${colors.newBGColor} !important`,
+    '@media (max-width: 900px)': {
+      height: 'auto !important',
+    },
+  },
+  disabledButton: {
+    cursor: 'not-allowed !important',
+    color: `${colors.white} !important`,
+    '@media (min-width: 1200px)': {
+      height: '2.5vw',
+      fontSize: '1vw',
+      padding: '0.8vw',
+      minWidth: '15vw',
+      borderRadius: '0.4vw !important',
+    },
+    fontSize: 'calc(12px + 6 * ((100vw - 320px) / 1199))',
+    boxShadow: '0 4px 4px -2px hsl(0deg 0% 65% / 25%)',
+    boxSizing: 'border-box',
+    fontFamily: 'inherit',
+    marginLeft: '1.2vw',
+    marginRight: '1vw',
+    textTransform: 'none !important',
+    background: `${colors.disabledPrimary} !important`,
+    '@media (max-width: 900px)': {
+      height: 'auto !important',
+    },
+  },
+  secButton: {
+    color: '#1976d2 !important',
+    border: '0.1px solid #1976d2',
+    '@media (min-width: 1200px)': {
+      height: '2.5vw',
+      padding: '0.8vw',
+      minWidth: '15vw',
+      borderRadius: '0.4vw !important',
+      fontSize: '1vw',
+    },
+    fontSize: 'calc(12px + 6 * ((100vw - 320px) / 1199))',
+    background: 'white',
+    boxShadow: '0 2px 5px rgb(0 0 0 / 16%), 0 2px 10px rgb(0 0 0 / 12%) !important',
+    boxSizing: 'border-box',
+    fontFamily: 'Roboto, sans-serif',
+    marginLeft: '1.2vw',
+    textTransform: 'none',
+    '& .MuiSvgIcon-root': {
+      '@media (min-width: 1200px)': {
+        width: '0.8vw',
+        height: '0.8vw',
+      },
+    },
+  },
+  disableButton: {
+    color: `${colors.white} !important`,
+    height: '2.7vw',
+    padding: '0.7vw',
+    minWidth: '14.5vw',
+    boxShadow: '0 4px 4px -2px hsl(0deg 0% 65% / 25%)',
+    boxSizing: 'border-box',
+    fontFamily: 'inherit',
+    marginLeft: '1.2vw',
+    marginRight: '1vw',
+    borderRadius: '0.4vw !important',
+    textTransform: 'none !important',
+    background: `${colors.disabledPrimary} !important`,
+    cursor: 'not-allowed',
+    fontSize: '1vw',
+  },
+  '.pac-icon': {
+    height: '2vw',
+  },
+});
+
+export default commonclasses;

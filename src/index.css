@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.pac-container {
+  z-index: 9999
+}
+
+.pac-container .pac-item,
+.pac-container .pac-item .pac-item-query {
+  font-size: 'calc(12px + 6 * ((100vw - 320px) / 1199))';
+}
+
+@media (min-width: 1200px) {
+
+  .pac-container .pac-item,
+  .pac-container .pac-item .pac-item-query {
+    font-size: '0.9vw';
+  }
+
+  .pac-container .pac-item,
+  .pac-container .pac-item .pac-item-query {
+    line-height: 2.1vw;
+    margin-left: 0.4vw;
+  }
+}
+
+.pac-container .pac-item .pac-icon {
+  width: 1.2vw;
+  height: 1.5vw;
+}
+
+.pac-logo:after {
+  height: auto;
+  background-size: 9vw 1.4vw;
+  background-image: none;
+}
+
+.pac-container:after {
+  background-image: none !important;
+  height: 0px;
+}
+
+@media (min-width: 1200px) {
+  #menu-volunteer ul li {
+    font-size: 0.9vw;
+    line-height: 2.1vw;
+  }
+}
+
+.pac-icon-marker {
+  display: none;
+}
+
+.MuiTooltip-popper .MuiTooltip-tooltip {
+  margin-top: 7px !important;
+}
+
+@media (min-width: 1200px) {
+  .MuiAutocomplete-groupUl .MuiAutocomplete-option {
+    font-size: 0.9vw;
+  }
+
+  .MuiAutocomplete-popper {
+    font-Size: 0.9vw;
+    display: block;
+  }
+}
+
+@media (max-width: 1199px) {
+  .MuiTooltip-popper .MuiTooltip-tooltip {
+    font-size: calc(12px + 6 * ((100vw - 320px) / 1199)) !important;
+  }
+}
